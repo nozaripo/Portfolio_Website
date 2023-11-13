@@ -531,6 +531,20 @@ main {
   z-index: 1;
 }
 
+.service-list-pub {
+  display: grid;
+  gap: 10px;
+}
+
+.service-item-pub {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+}
+
 .service-item::before {
   content: "";
   position: absolute;
