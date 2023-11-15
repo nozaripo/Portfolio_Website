@@ -401,109 +401,47 @@
     <h2 class="h2 article-title">Resume</h2>
   </header>
 
-  <section class="projects">
+ <header>
+    <h2 class="h2 article-title">Resume</h2>
+  </header>
 
-    <ul class="filter-list">
-      <li class="filter-item">
-        <button class="active" data-filter-btn>Certifications</button>
+  <div class="tabs">
+    <button class="tab-button active" onclick="showTab('certifications')">Certifications</button>
+    <button class="tab-button" onclick="showTab('education')">Education</button>
+  </div>
+
+  <div id="certifications" class="tab-content active-tab">
+    <h3>Certifications</h3>
+    <ul>
+      <li>
+        <img src="badge_image_1.jpg" alt="Badge 1">
+        <a href="certification_link_1.html">Certification Name 1</a>
       </li>
-      <li class="filter-item">
-        <button data-filter-btn>Education</button>
-      </li>
-      <li class="filter-item">
-        <button data-filter-btn>Coursework</button>
-      </li>
-    </ul>
-
-    <div class="filter-select-box">
-
-      <button class="filter-select" data-select>
-
-        <div class="select-value" data-selecct-value>Select category</div>
-
-        <div class="select-icon">
-          <ion-icon name="chevron-down"></ion-icon>
-        </div>
-
-      </button>
-
-      <ul class="select-list">
-
-        <li class="select-item">
-          <button data-select-item>Certifications</button>
-        </li>
-
-        <li class="select-item">
-          <button data-select-item>Education</button>
-        </li>
-
-        <li class="select-item">
-          <button data-select-item>Coursework</button>
-        </li>
-
-      </ul>
-
-    </div>
-
-    <!-- Certifications Tab Content -->
-    <ul class="project-list certifications active">
-
-      <li class="project-item active" data-filter-item data-category="certifications">
-        <a href="https://github.com/nozaripo/Machine_Learning_Projects/blob/main/AI%20for%20Anomaly%20Detection/Anomaly_Detection_in_Network_Data_using_GPU_Accelerated_XGBoost.ipynb" target="_blank">
-
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/Anomaly_Detection.png" alt="finance" loading="lazy">
-          </figure>
-
-          <h3 class="project-title">Anomaly Detection Using XGBoost</h3>
-
-          <p class="project-category">Certifications</p>
-
-        </a>
+      <li>
+        <img src="badge_image_2.jpg" alt="Badge 2">
+        <a href="certification_link_2.html">Certification Name 2</a>
       </li>
       <!-- Add more certification items as needed -->
-
     </ul>
+  </div>
 
-    <!-- Education Tab Content -->
-    <section class="timeline education" data-filter-item data-category="education">
+  <div id="education" class="tab-content">
+    <h3>Education</h3>
+    <p>
+      Your education details go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+  </div>
 
-      <div class="title-wrapper">
-        <div class="icon-box">
-          <ion-icon name="book-outline"></ion-icon>
-        </div>
+  <section>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => {
+        tab.classList.remove('active-tab');
+      });
 
-        <h3 class="h3" data-filter-item data-category="education">Education</h3>
-      </div>
-
-      <ol class="timeline-list">
-        <!-- Your existing education timeline items -->
-      </ol>
-
-    </section>
-
-    <!-- Coursework Tab Content -->
-    <section class="timeline coursework" data-filter-item data-category="coursework">
-
-      <div class="title-wrapper">
-        <div class="icon-box">
-          <ion-icon name="book-outline"></ion-icon>
-        </div>
-
-        <h3 class="h3">Coursework</h3>
-      </div>
-
-      <ol class="timeline-list">
-        <!-- Your existing coursework timeline items -->
-      </ol>
-
-    </section>
-
+      document.getElementById(tabId).classList.add('active-tab');
+    }
   </section>
-
 </article>
 
 
