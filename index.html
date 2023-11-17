@@ -415,7 +415,7 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="portfolio" data-page="portfolio" id="portfolio>
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
@@ -1140,7 +1140,7 @@
 
 
 
-        <iframe src="assets/Pouria_Nozari_Resume_DataScientist.pdf#zoom=90" height="100%" width="100%"></iframe>
+        <iframe src="assets/Pouria_Nozari_Resume_DataScientist.pdf#zoom=90" height="1000" width="100%"></iframe>
 
       
       
@@ -1480,6 +1480,22 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <footer>
+    <!-- Your footer content -->
+  </footer>
+
+  <script>
+    // JavaScript to update the URL suffix based on the current article
+    const articles = document.querySelectorAll('article');
+
+    articles.forEach((article, index) => {
+      article.addEventListener('click', () => {
+        const suffix = `#${article.id}`;
+        history.pushState({}, document.title, window.location.pathname + suffix);
+      });
+    });
+  </script>
 
 </body>
 
